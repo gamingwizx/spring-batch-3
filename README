@@ -1,0 +1,5 @@
+1) In MySQL, create a database called "batchdb"
+2) Type `use batchdb`
+3) Run the script in `run.sql`
+4) Run the spring batch project by doing `.\gradlew bootRun`
+5) See the results by checking the file name called `output-data.csv` in the root directory of project.
