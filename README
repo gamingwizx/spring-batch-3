@@ -1,5 +1,11 @@
 1) In MySQL, create a database called "batchdb"
 2) Type `use batchdb`
 3) Run the script in `run.sql` under src\main\resources.
-4) Run the spring batch project by doing `.\gradlew bootRun`
-5) See the results by checking the file name called `output-data.csv` in the root directory of project.
+4) Seed the 30k records from the csv file into the table you want to process by running the command below:
+LOAD DATA LOCAL INFILE "C:\\Users\\User\\Documents\\gs-batch-processing\\initial\\src\\main\\resources\\sample-data-2.csv"
+INTO TABLE batchdb.input_user
+FIELDS TERMINATED BY ','
+IGNORE 1 ROWS;
+
+5) Run the spring batch project by doing `.\gradlew bootRun`
+6) See the results by checking the file name called `output-data.csv` in the root directory of project.
